@@ -1,0 +1,15 @@
+package Local;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class Iptest {
+
+	public static void main(String[] args) throws UnknownHostException {
+		// TODO Auto-generated method stub
+		InetAddress add=InetAddress.getLocalHost();
+		System.out.println(add.getHostAddress());
+		System.out.println(add.getHostName());
+	}
+
+}

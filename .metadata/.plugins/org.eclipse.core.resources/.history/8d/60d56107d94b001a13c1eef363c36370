@@ -1,0 +1,19 @@
+package String;
+
+public class StringTest {
+	public static void main(String[] args) {
+		String s="123;456;789;123 345";
+		System.out.println(s.charAt(0));
+		System.out.println(s.indexOf(";"));//返回第一个;的位置
+		System.out.println(s.concat(";456"));//连接一个新字符串并返回，原串s不变
+		System.out.println(s.contains("123;"));//判断是否包含123;
+		System.out.println(s.endsWith(";123"));//判断是否以;123结尾
+		System.out.println(s.trim());//返回s去除前后空格后的字符串，原串s不变
+		String[] s1=s.split(";");//将s按照;分割
+		for(String sb:s1)
+			System.out.println(sb);
+		System.out.println(s.substring(2,5));//截取s子串，s不变
+		System.out.println(s.replace("3", "a"));
+		System.out.println(s.replaceAll("*", "a"));
+	}
+}

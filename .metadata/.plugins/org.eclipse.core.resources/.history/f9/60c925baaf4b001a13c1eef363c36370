@@ -1,0 +1,22 @@
+package Local;
+
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.UnknownHostException;
+
+public class Iptest {
+
+	public static void main(String[] args) throws UnknownHostException {
+		// TODO Auto-generated method stub
+		InetAddress add=InetAddress.getLocalHost();
+		System.out.println(add.getHostAddress());
+		System.out.println(add.getHostName());
+		
+		add=InetAddress.getByName("www.google.com");
+		System.out.println(add.getHostAddress());
+		System.out.println(add.getHostName());
+		InetSocketAddress addr=new InetSocketAddress("localhost", 8080);
+		System.out.println(addr.getAddress());
+	}
+
+}

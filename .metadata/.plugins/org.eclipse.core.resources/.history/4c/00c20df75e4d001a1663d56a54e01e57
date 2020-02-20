@@ -1,0 +1,32 @@
+package TCP;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class TCPClient {
+
+	public static void main(String[] args) {
+		try {
+			Socket s=new Socket(InetAddress.getByName("localhost"), 9090);//连接服务器
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

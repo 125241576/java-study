@@ -1,0 +1,14 @@
+package Time;
+
+import java.util.Calendar;
+
+public class CalendarTest {
+	public static void main(String[] args) {
+		Calendar ga=Calendar.getInstance();//利用反射初始化
+		
+		int year = ga.get(Calendar.YEAR);
+		int month =Calendar.YEAR;
+		System.out.println(month);
+		
+	}
+}

@@ -1,0 +1,15 @@
+package Time;
+
+import java.time.LocalDate;
+
+public class LocalDateTest {
+
+	public static void main(String[] args) {
+		LocalDate ld=LocalDate.now();//当前日期
+		System.out.println(ld);
+		
+		LocalDate firstDay_2020=LocalDate.of(2020, 1, 1);
+		System.out.println(firstDay_2020);
+	}
+
+}

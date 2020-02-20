@@ -1,0 +1,37 @@
+package TCP;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class TCPServer {
+
+	public static void main(String[] args) {
+		try {
+			ServerSocket ss=new ServerSocket(9090);
+			Socket s=ss.accept();
+			System.out.println("成功连接！");
+			InputStream ips=s.getInputStream();//服务器输入流
+			OutputStream ops=s.getOutputStream();//服务器输出流
+			
+			ops.write("您已成功连接服务器！".getBytes());
+			
+			BufferedReader br=new BufferedReader(new InputStreamReader(ips));
+			System.out.println("recive : "+br.readLine());
+			
+			ips.close();
+			ops.close();
+			s.close();
+			ss.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

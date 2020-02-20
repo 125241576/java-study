@@ -1,0 +1,17 @@
+package UDP;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetSocketAddress;
+import java.net.SocketAddress;
+import java.net.SocketException;
+public class UdpClient {
+	public static void main(String[] args) throws Exception {
+		System.out.println("SEND....");
+		DatagramSocket d=new DatagramSocket(9090);
+		String s=new String("Bonjour!");
+		byte[] b=s.getBytes();
+		DatagramPacket packet=new DatagramPacket(b,  b.length, new InetSocketAddress("localhost",9999));
+		d.send(packet);
+		d.close();
+	}
+}

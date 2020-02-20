@@ -1,0 +1,14 @@
+package String;
+
+public class StringTest {
+	public static void main(String[] args) {
+		String s="123;456;789;123";
+		System.out.println(s.charAt(0));
+		System.out.println(s.indexOf(3));
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+}
